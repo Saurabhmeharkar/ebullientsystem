@@ -213,6 +213,7 @@
                                     <div class="col-md-12">
                                         <button type="submit" class="btn">Send Message</button>
                                     </div>
+                                     <button onclick="share()" class="btn">Share</button>
                                 </div>
                             </div>
                         </div>
@@ -263,6 +264,20 @@
                     alert("There was an error :(");
                 })
         })
+
+        function share(){
+            if (navigator.share) {
+              navigator.share({
+                title: 'Game referral',
+                text: `Hey! Join the game today. \n Use the referral code while registering and enjoy the benefits now. \n Register Now!`,
+                url: `https:localhost:4200/register?rcode=1234`,
+              })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+            } else {
+              console.log('Share not supported on this browser, do it the old way.');
+            }
+        }
     </script>
 </body>
 
