@@ -269,8 +269,8 @@
             if (navigator.share) {
               navigator.share({
                 title: 'Game referral',
-                text: `Hey! Join the game today. \n Use the referral code while registering and enjoy the benefits now. \n Register Now!`,
-                url: `https:localhost:4200/register?rcode=1234`,
+                text: `Hey! Join the game today.\nUse the referral code while registering and enjoy the benefits now. \nRegister Now! \n`,
+                url: `https:game.com/register?rcode=1234`,
               })
                 .then(() => console.log('Successful share'))
                 .catch((error) => console.log('Error sharing', error));
