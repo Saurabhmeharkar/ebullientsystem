@@ -177,11 +177,10 @@ a {
 
 .service-section .service-item {
     box-shadow: 0 0 10px #f9f9ff;
-    padding: 40px 30px;
+    padding: 25px 18px;
     margin-bottom: 30px;
     background-color: #ffffff;
     border-radius: 5px;
-    text-align: center;
     transition: all 0.5s ease;
 }
 
@@ -190,7 +189,10 @@ a {
 }
 
 .service-section .service-item img {
-    max-width: 100px;
+    max-width: 60px;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .service-section .service-item h3 {
@@ -198,7 +200,8 @@ a {
     font-weight: 600;
     color: #1F0F3D;
     line-height: 30px;
-    margin: 0 0 15px;
+    margin: 15px 0 15px;
+    line-height: 1.1;
     transition: all 0.5s ease;
 }
 
@@ -225,7 +228,7 @@ a {
 }
 
 .about-section .about-content p {
-    font-size: 1.5rem;
+    font-size: 17px;
     font-weight: 400;
     color: #1F0F3D;
 }
