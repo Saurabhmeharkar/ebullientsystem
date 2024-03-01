@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Add scrollspy to <body>
     $('body').scrollspy({ target: ".navbar-nav", offset: 67 });
 
     // Add smooth scrolling on all links inside the navbar
-    $(".navbar-nav a").on('click', function(event) {
+    $(".navbar-nav a").on('click', function (event) {
 
         // Make sure this.hash has a value before overriding default behavior
         if (this.hash !== "") {
@@ -19,7 +19,7 @@ $(document).ready(function() {
             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 800, function() {
+            }, 800, function () {
 
                 // Add hash (#) to URL when done scrolling (default click behavior)
                 window.location.hash = hash;
@@ -32,3 +32,14 @@ $(document).ready(function() {
 
     });
 });
+
+async function functionplayVideoFromCamera() {
+    try {
+        const constraints = { 'video': true, 'audio': true };
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
+        const videoElement = document.getElementById('stream-live');
+        videoElement.srcObject = stream;
+    } catch (error) {
+        console.error('Error opening video camera.', error);
+    }
+}
