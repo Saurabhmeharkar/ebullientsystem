@@ -32,14 +32,3 @@ $(document).ready(function () {
 
     });
 });
-
-async function functionplayVideoFromCamera() {
-    try {
-        const constraints = { 'video': true, 'audio': true };
-        const stream = await navigator.mediaDevices.getUserMedia(constraints);
-        const videoElement = document.getElementById('stream-live');
-        videoElement.srcObject = stream;
-    } catch (error) {
-        console.error('Error opening video camera.', error);
-    }
-}
